@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { HeaderComponent } from './components/header/header.component';
+import { settings } from './app.config';
 
 @Component({
   selector: 'app-root',
@@ -12,5 +13,5 @@ import { HeaderComponent } from './components/header/header.component';
   styles: [],
 })
 export class AppComponent {
-  title = 'splimo';
+  title = settings.title;
 }

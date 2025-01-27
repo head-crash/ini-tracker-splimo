@@ -1,16 +1,18 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { NavigationService } from '../../services/navigation.service';
+import { CharacterCardComponent } from "../../components/character-card/character-card.component";
+import { SceneService } from '../../services/scene.service';
+import { AddFabComponent } from '../../components/add-fab/add-fab.component';
+import { Character } from '../../models/character.model';
 
 @Component({
   selector: 'app-tracker',
-  template: `
-<div class="bg-black min-h-screen flex items-center justify-center">
-
-</div>
-  `,
+  templateUrl: `./tracker.component.html`,
   styles: [],
   standalone: true,
-  imports: []
+  imports: [CharacterCardComponent, AddFabComponent]
 })
 export class TrackerComponent {
-  
+  navigation = inject(NavigationService);
+  scene = inject(SceneService);
 }

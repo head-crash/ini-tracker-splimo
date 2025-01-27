@@ -7,3 +7,15 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
 export const appConfig: ApplicationConfig = {
   providers: [provideZoneChangeDetection({ eventCoalescing: true }), provideRouter(routes), provideAnimationsAsync()]
 };
+
+export const settings = {
+  title: 'splimo',
+  version: '0.1.0',
+  apiUrl: 'https://ini-tracker.de/splimo',
+  navigation: {
+    staticMenu: [
+      { label: 'Home', path: '' },
+      { label: 'New Scene', action: () => console.log('New Scene') },
+    ]
+  }
+}

@@ -1,0 +1,8 @@
+<div class="flex items-center justify-between bg-gray-300 border-4 rounded-md my-1 w-full border-solid"
+  [ngClass]="char().color.border">
+  <div class="flex-none text-center text-white text-xl font-bold p-2" [ngClass]="char().color.bg">&nbsp;</div>
+  <div class="flex-1 text-left overflow-hidden whitespace-nowrap overflow-ellipsis p-2">{{ char().name }}</div>
+  <div class="flex-none text-center text-xl font-bold p-2">{{ char().tick }}</div>
+  <div class="flex-none text-center text-sm p-2">({{ char().int }})</div>
+  <div class="flex-none text-center bg-red-600 text-white text-xl font-bold p-2 min-w-[50px]">{{ char().hp }}</div>
+</div>
